@@ -25,7 +25,7 @@
       <div class="button btn btn-danger" [ngClass]="{'disabled': prevent}"  (click)="default()">Default</div>
     </div>
 
-    <div #sim class="simulate-container flex-column flex-md-row d-flex justify-content-start align-items-center">
+    <div #sim class="simulate-container flex-column flex-md-row d-flex justify-content-start align-items-start align-items-md-center">
         <div id="from" class="name-sim">From:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 0"></div>
         <div id="to" class="name-sim">To:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 120"></div>
         <div id="duration" class="name-sim">Duration (seconds):<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 5"></div>
