@@ -4,7 +4,7 @@ Angular 2 advanced progress bar component that can be divided and adapted into m
 
 ## Dependecies
 
-Angular Material
+Angular Material,
 Bootstrap
 
 
