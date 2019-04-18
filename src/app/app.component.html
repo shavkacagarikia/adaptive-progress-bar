@@ -1,0 +1,37 @@
+<div class="user-progress-container d-flex flex-column justify-content-start position-relative">
+  <div class="text text-center">Adaptive ProgressBar</div>
+  <div class="tester w-75 row no-gutters flex-column justify-content-start align-items-start">
+    <div #form class="tester-inner w-100 row no-gutters justify-content-start align-items-center">
+
+      <div id="maxValue" class="name">Maximum Value:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 550"></div>
+
+      <div id="progress" class="name">Progress:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 120"></div>
+
+      <div id="inputPartitions" class="name array">Partitions (divided by comma):<input [disabled]="prevent" type="text"
+          class="form-control" placeholder="e: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500"></div>
+
+      <div id="isCheckable" class="name checkable">Checkable (passed partitions are marked):<input [disabled]="prevent" type="checkbox"
+          placeholder="checks passed partitions"> </div>
+
+
+      <div id="isAdaptationReversed" title="doesnt work well with absurd partitions" class="name checkable">Reverse
+        Adaptation: <input [disabled]="prevent" type="checkbox" placeholder="reverse adaptation"></div>
+    </div>
+
+
+    <div class="buttons-container">
+      <div class="button btn btn-success" [ngClass]="{'disabled': prevent}"  (click)="generate()">Generate</div>
+      <div class="button btn btn-warning" [ngClass]="{'disabled': prevent}"  (click)="random()">Random</div>
+      <div class="button btn btn-danger" [ngClass]="{'disabled': prevent}"  (click)="default()">Default</div>
+    </div>
+
+    <div #sim class="simulate-container flex-column flex-md-row d-flex justify-content-start align-items-center">
+        <div id="from" class="name-sim">From:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 0"></div>
+        <div id="to" class="name-sim">To:<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 120"></div>
+        <div id="duration" class="name-sim">Duration (seconds):<input [disabled]="prevent" type="text" class="form-control" placeholder="e: 5"></div>
+        <div class="button btn btn-secondary" [ngClass]="{'disabled': prevent}"  (click)="simulate()">Simulate</div>
+    </div>
+
+  </div>
+  <app-progress-bar [progressBarConfig$]="progressBarConfig$" class="w-100 app-progress-bar"></app-progress-bar>
+</div>

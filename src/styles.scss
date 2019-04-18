@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./assets/css/fonts";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #ff1644;
+}
+
+body {
+  background: #39CCCC;
+}
+html, body {
+  height: 100%;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.progress {
+     height: initial!important;
+     overflow: initial!important;
+     background-color: initial!important;
+     border-radius: initial!important;
+}

@@ -1,0 +1,141 @@
+.progress-container-inner {
+  .current-value {
+    // transition: width 1s ease-in-out;
+    width: 0%;
+  }
+
+  .current-value div {
+    padding: 4px 20px;
+    background: #ffffff;
+    color: #3b3b3b;
+    transform: translate(35px, -75px);
+    border-radius: 50px;
+  }
+
+  .current-value div:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -9px;
+  }
+
+  .progress-bar-wrapper {
+    align-items: center;
+
+    .progress-bar-range-value {
+      font-size: 16px;
+    }
+
+    .progress-bar-range-value::after {
+      content: "";
+    }
+
+    .min-value {
+      margin-right: 20px;
+    }
+
+    .max-value {
+      margin-left: 20px;
+    }
+
+    .progress-bar-content-wrapper {
+      border-radius: 100px;
+      height: 30px;
+      flex: 1;
+      background-color: #323340;
+      padding: 4px 4px;
+      border: none !important;
+
+      .progress-bar-content {
+        border-radius: 100px;
+        background: rgb(209, 203, 52);
+        background: linear-gradient(150deg, rgba(209, 203, 52, 1) 20%, rgba(28, 166, 73, 1) 100%);
+        box-shadow: -4px -4px 15px rgba(0,0,0,.15) inset, 15px 10px 13px rgba(255,255,255,.2) inset;
+        height: 100%;
+        // transition: width 1s ease-in-out;
+        width: 0%;
+      }
+    }
+  }
+
+  .partitions-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    .reverse {
+      transform: translateY(15px);
+      .partition-item {
+        opacity: 0.5;
+
+        .vertical-line {
+          height: 10px;
+          width: 2px;
+          opacity: 0.5;
+          background: white;
+        }
+      }
+    }
+    .partition-item {
+      opacity: 0.5;
+      .vertical-line {
+        height: 10px;
+        width: 2px;
+        opacity: 0.5;
+        background: white;
+      }
+    }
+  }
+
+  mat-spinner {
+    left: 0px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -23px;
+  }
+
+}
+.checked {
+  opacity: 1 !important;
+  transition: all 1s ease-in-out;
+}
+
+.animated {
+  transition: width 1s ease-in-out
+}
+
+@media (max-width: 767.98px) {
+  .progress-bar-wrapper {
+    transform: translateY(6px);
+  }
+
+  .progress-bar-wrapper {
+    .progress-bar-range-value {
+      font-size: 12px;
+    }
+  }
+
+  .progress-container-inner {
+    .current-value div {
+      padding: 0px 10px;
+      transform: translate(30px, -60px);
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .progress-container {
+    .partitions-container {
+      display: none !important;
+    }
+  }
+}
