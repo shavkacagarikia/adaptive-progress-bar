@@ -5,7 +5,7 @@ Angular 2 advanced progress bar component that can be divided and adapted into m
 ## Dependecies
 Bootstrap
 
-##Demo
+## Demo
 https://angular-adaptive-progress-bar.stackblitz.io/
 
 
